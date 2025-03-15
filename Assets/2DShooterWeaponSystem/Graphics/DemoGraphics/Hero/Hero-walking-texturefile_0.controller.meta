@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d93ebcad66f22464fa345149cf95a0fb
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19922
+  packageName: 2D Shooter Bullet and Weapon System
+  packageVersion: 2.0.0
+  assetPath: Assets/2DShooterWeaponSystem/Graphics/DemoGraphics/Hero/Hero-walking-texturefile_0.controller
+  uploadId: 537312

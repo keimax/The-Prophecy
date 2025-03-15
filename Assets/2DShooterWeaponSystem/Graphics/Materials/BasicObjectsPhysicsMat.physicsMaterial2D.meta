@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0b46138287bafb849bb259b71a12fb07
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19922
+  packageName: 2D Shooter Bullet and Weapon System
+  packageVersion: 2.0.0
+  assetPath: Assets/2DShooterWeaponSystem/Graphics/Materials/BasicObjectsPhysicsMat.physicsMaterial2D
+  uploadId: 537312

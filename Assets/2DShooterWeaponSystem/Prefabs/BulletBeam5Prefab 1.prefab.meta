@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c49a4556dbe084e45bac007ec55a634a
+timeCreated: 1480427642
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19922
+  packageName: 2D Shooter Bullet and Weapon System
+  packageVersion: 2.0.0
+  assetPath: Assets/2DShooterWeaponSystem/Prefabs/BulletBeam5Prefab 1.prefab
+  uploadId: 537312

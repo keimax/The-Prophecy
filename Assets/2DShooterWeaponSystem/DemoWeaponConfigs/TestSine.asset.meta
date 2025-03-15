@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 35c06b24836ae8442890ac68dd97e491
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19922
+  packageName: 2D Shooter Bullet and Weapon System
+  packageVersion: 2.0.0
+  assetPath: Assets/2DShooterWeaponSystem/DemoWeaponConfigs/TestSine.asset
+  uploadId: 537312

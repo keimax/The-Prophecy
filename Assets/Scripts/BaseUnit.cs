@@ -1,82 +1,57 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class BaseUnit : MonoBehaviour
+public abstract class BaseUnit : MonoBehaviour
 {
     [Header("Health Variables")]
-    protected const int MAX_HEALTH = 5;
-    [SerializeField] protected int health = 5;
+    [SerializeField] protected int MAX_HEALTH = 100; // Maximum health value
+    [SerializeField] private int _health; // Backing field for health
     protected bool isAlive = true;
 
-    [Header("HealthBar")]
-    [SerializeField] protected GameObject healthBarParent;
-    [SerializeField] protected GameObject healthBarSlider;
+    [Header("Shield Variables")]
+    [SerializeField] protected int MAX_SHIELD = 50; // Maximum shield value
+    [SerializeField] private int _shield; // Backing field for shield
 
-    [Header("Hit Effect")]
-    [SerializeField] protected Material flashMaterial;
-    [SerializeField] private float duration = 0.1f;
-    protected SpriteRenderer spriteRenderer;
-    protected Material originalMaterial;
-    protected Coroutine flashRoutine;
-
-
-    public void Start()
+    // Make these properties public and serialized to show in Inspector
+    public int health
     {
-        health = MAX_HEALTH;
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        originalMaterial = spriteRenderer.material;
-    }
-
-    public void OnTakeDamage(int damage)
-    {
-        health -= damage;
-        Flash();
-
-        if (health < 1)
+        get => _health;
+        protected set // Protected setter
         {
-            Die();
-            health = 0;
+            _health = Mathf.Clamp(value, 0, MAX_HEALTH);
+            UpdateHealthBar(); // Update health bar when health changes
+            Debug.Log($"Health set to: {_health}"); // Added logging
         }
-
-        UpdateHealthBar();
     }
 
-    protected void UpdateHealthBar()
+    public int shield
     {
-        if (healthBarParent.activeInHierarchy == false)
+        get => _shield;
+        protected set // Protected setter
         {
-            healthBarParent.SetActive(true);
+            _shield = Mathf.Clamp(value, 0, MAX_SHIELD);
+            UpdateShieldBar(); // Update shield bar when shield changes
+            Debug.Log($"Shield set to: {_shield}"); // Added logging
         }
-
-        healthBarSlider.transform.localScale = new Vector3(Mathf.Clamp01((float)health / (float)MAX_HEALTH), 1, 1);
     }
+
+    public int MaxHealth => MAX_HEALTH; // Public getter for MAX_HEALTH
+    public int MaxShield => MAX_SHIELD; // Public getter for MAX_SHIELD
+
+    public virtual void Start()
+    {
+        health = MAX_HEALTH; // Initialize health
+        shield = MAX_SHIELD; // Initialize shield
+        Debug.Log($"BaseUnit initialized with Health: {health}, Shield: {shield}");
+    }
+
+    protected virtual void UpdateHealthBar() { /* To be overridden in derived classes */ }
+    protected virtual void UpdateShieldBar() { /* To be implemented if needed */ }
 
     protected virtual void Die()
     {
-        StopCoroutine(flashRoutine);
-        gameObject.SetActive(false);
-        isAlive = false;
-    }
-
-    public void Flash()
-    {
-        if (isAlive)
-        {
-            if (flashRoutine != null)
-            {
-                StopCoroutine(flashRoutine);
-            }
-            flashRoutine = StartCoroutine(FlashRoutine());
-        }
-    }
-
-    private IEnumerator FlashRoutine()
-    {
-        spriteRenderer.material = flashMaterial;
-        yield return new WaitForSeconds(duration);
-        spriteRenderer.material = originalMaterial;
-        flashRoutine = null;
+        isAlive = false; // Set alive status to false
+        gameObject.SetActive(false); // Deactivate the object
+        Debug.Log($"{gameObject.name} has died.");
     }
 }

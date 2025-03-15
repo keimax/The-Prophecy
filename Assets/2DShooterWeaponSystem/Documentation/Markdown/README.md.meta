@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4f5807a03b7f9714f8ba60c619f08d5a
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19922
+  packageName: 2D Shooter Bullet and Weapon System
+  packageVersion: 2.0.0
+  assetPath: Assets/2DShooterWeaponSystem/Documentation/Markdown/README.md
+  uploadId: 537312

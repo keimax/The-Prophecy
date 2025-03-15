@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 909386d96822b574b8a2115cea793afd
+timeCreated: 1465820159
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19922
+  packageName: 2D Shooter Bullet and Weapon System
+  packageVersion: 2.0.0
+  assetPath: Assets/2DShooterWeaponSystem/Documentation/Doxyfile
+  uploadId: 537312

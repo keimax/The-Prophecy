@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f9addc251b017ff4bbb282e97744ac7d
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19922
+  packageName: 2D Shooter Bullet and Weapon System
+  packageVersion: 2.0.0
+  assetPath: Assets/2DShooterWeaponSystem/Scripts/WeaponSystem.cs
+  uploadId: 537312

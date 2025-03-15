@@ -11,6 +11,7 @@ namespace TheProphecy.Map.DungeonGeneration
         [SerializeField] private GameObject _player;
         [SerializeField] private GameObject _chest;
         [SerializeField] private GameObject _boss;
+        [SerializeField] private GameObject _carrier;
         [SerializeField] private GameObject _basicEnemy;
 
         [Header("Containers")]

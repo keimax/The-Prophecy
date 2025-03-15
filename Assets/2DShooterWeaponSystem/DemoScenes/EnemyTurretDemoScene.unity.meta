@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6d0790f265aa56e4994d1b0d1b5f571a
+timeCreated: 1465338325
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19922
+  packageName: 2D Shooter Bullet and Weapon System
+  packageVersion: 2.0.0
+  assetPath: Assets/2DShooterWeaponSystem/DemoScenes/EnemyTurretDemoScene.unity
+  uploadId: 537312

@@ -5,7 +5,24 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: Assets/2DShooterWeaponSystem/DemoScenes/WeaponConfigurationAndInventoryDemoScene.unity
+    guid: f3ead44b5bbe4004dad2a725ff70495f
+  - enabled: 0
+    path: Assets/2DShooterWeaponSystem/DemoScenes/SpaceTopDownDemoScene.unity
+    guid: 7608651992fc44249bcbeef898eb4070
+  - enabled: 0
+    path: Assets/2DShooterWeaponSystem/DemoScenes/BulletDemoScene.unity
+    guid: 237a62fccd83206418b35a8602eb1c0d
+  - enabled: 0
+    path: Assets/2DShooterWeaponSystem/DemoScenes/EnemyTurretDemoScene.unity
+    guid: 6d0790f265aa56e4994d1b0d1b5f571a
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  m_configObjects: {}
+    path: Assets/Scenes/map1.unity
+    guid: a357dd7b76c137b4ca2ac7dcaf235991
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 18c87c8d16f256e4e9bd049a64551392,
+      type: 2}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 4ce2339e101c7b149919b4d071701921,
+      type: 3}
+  m_UseUCBPForAssetBundles: 0

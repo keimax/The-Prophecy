@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: afc41fcc757242549a36084bf8c7e0d6
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19922
+  packageName: 2D Shooter Bullet and Weapon System
+  packageVersion: 2.0.0
+  assetPath: Assets/2DShooterWeaponSystem/DemoWeaponConfigs/Crazy gun unlimited ammo.asset
+  uploadId: 537312

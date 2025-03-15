@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 29e9ada9852b8d349a7d69fa0263e0c8
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19922
+  packageName: 2D Shooter Bullet and Weapon System
+  packageVersion: 2.0.0
+  assetPath: Assets/2DShooterWeaponSystem/Graphics/Materials/SpriteLightingMaterial.mat
+  uploadId: 537312

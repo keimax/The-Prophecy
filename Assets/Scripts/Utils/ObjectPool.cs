@@ -15,6 +15,8 @@ namespace TheProphecy
         {
             _prefab = prefab;
             _container = container;
+            Debug.Log(_prefab);
+            Debug.Log(_container);
         }
 
         public void FillThePool(int count)
@@ -24,6 +26,7 @@ namespace TheProphecy
                 GameObject object_ = Object.Instantiate(_prefab);
                 object_.transform.parent = _container.transform;
                 AddToPool(object_);
+                if (object_.GetComponent<Bullets>() != null) object_.GetComponent<Bullets>().InitializePool(this);
             }
         }
 
@@ -45,8 +48,12 @@ namespace TheProphecy
 
         public void AddToPool(GameObject object_)
         {
+            if (object_.GetComponent<Bullets>() != null) object_.GetComponent<Bullets>().InitializePool(this);
+        //    Debug.Log(object_.gameObject.activeSelf);
             object_.gameObject.SetActive(false);
             _objectPool.Push(object_);
+        //    Debug.Log(object_.gameObject.activeSelf);
+
         }
     }
 }

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6911061491902e049a883a4c220c1974
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19922
+  packageName: 2D Shooter Bullet and Weapon System
+  packageVersion: 2.0.0
+  assetPath: Assets/2DShooterWeaponSystem/DemoWeaponConfigs/Pulse Laser Rifle.asset
+  uploadId: 537312

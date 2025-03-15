@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c0b4c0b37344a304a8e97212f9f6dfe8
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19922
+  packageName: 2D Shooter Bullet and Weapon System
+  packageVersion: 2.0.0
+  assetPath: Assets/2DShooterWeaponSystem/WeaponConfigs/DemoTurret3.asset
+  uploadId: 537312

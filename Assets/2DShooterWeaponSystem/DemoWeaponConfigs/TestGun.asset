@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3a0773bacf905649a3715eea5f6d6c1, type: 3}
+  m_Name: TestGun
+  m_EditorClassIdentifier: 
+  weaponName: Test1
+  bulletSpread: 0
+  bulletSpreadPingPongMax: 0
+  bulletSpreadPingPongMin: 0
+  spreadPingPongSpeed: 1
+  bulletSpacing: 0.25
+  bulletCount: 2
+  bulletRandomness: 0.05
+  bulletSpeed: 14
+  weaponFireRate: 0.02
+  weaponXOffset: 0.5
+  weaponYOffset: -0.2
+  ricochetChancePercent: 0
+  magazineChangeDelay: 0
+  bulletColour: {r: 1, g: 1, b: 1, a: 1}
+  weaponIcon: {fileID: 2800000, guid: 753e0e60e4e36ba41b7f641c858267cf, type: 3}
+  magazineSize: 0
+  magazineRemainingBullets: 0
+  ammoAvailable: 0
+  ammoUsed: 0
+  autoFire: 0
+  pingPongSpread: 0
+  richochetsEnabled: 1
+  hitEffectEnabled: 1
+  limitedAmmo: 0
+  usesMagazines: 0
+  isFirstEquip: 0
+  mirrorX: 0
+  bulletCountsAsAmmo: 0
+  playReloadingSfx: 0
+  playEmptySfx: 0
+  weaponRelativeToComponent: 0
+  trackingTurnRate: 0
+  lerpTurnRate: 0
+  circularFireRotationRate: 0
+  circularFireMode: 0
+  targetToTrack: {fileID: 0}
+  reloadSfxClip: {fileID: 0}
+  emptySfxClip: {fileID: 0}
+  shotFiredClip: {fileID: 0}
+  shooterType: 2
+  bulletOptionType: 4

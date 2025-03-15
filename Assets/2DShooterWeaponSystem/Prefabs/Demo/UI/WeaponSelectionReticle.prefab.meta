@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9097e29b0b1f4eb42af9aa731939e160
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19922
+  packageName: 2D Shooter Bullet and Weapon System
+  packageVersion: 2.0.0
+  assetPath: Assets/2DShooterWeaponSystem/Prefabs/Demo/UI/WeaponSelectionReticle.prefab
+  uploadId: 537312

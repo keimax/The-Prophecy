@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3a0773bacf905649a3715eea5f6d6c1, type: 3}
+  m_Name: Insane gun unlimited ammo
+  m_EditorClassIdentifier: 
+  weaponName: Insane gun unlimited ammo
+  bulletSpread: 1.941642
+  bulletSpreadPingPongMax: 4.69
+  bulletSpreadPingPongMin: 0.99
+  spreadPingPongSpeed: 2.042
+  bulletSpacing: 0.05
+  bulletCount: 9
+  bulletRandomness: 1.413043
+  bulletSpeed: 9
+  weaponFireRate: 0.04
+  weaponXOffset: 0.5
+  weaponYOffset: -0.25
+  ricochetChancePercent: 45
+  magazineChangeDelay: 0.8
+  bulletColour: {r: 1, g: 1, b: 1, a: 1}
+  weaponIcon: {fileID: 2800000, guid: a9b111c35508cd24582584406862ab61, type: 3}
+  magazineSize: 300
+  magazineRemainingBullets: 0
+  ammoAvailable: 0
+  ammoUsed: 0
+  autoFire: 0
+  pingPongSpread: 1
+  richochetsEnabled: 1
+  hitEffectEnabled: 1
+  limitedAmmo: 0
+  usesMagazines: 0
+  isFirstEquip: 1
+  mirrorX: 0
+  bulletCountsAsAmmo: 0
+  playReloadingSfx: 1
+  playEmptySfx: 1
+  weaponRelativeToComponent: 0
+  trackingTurnRate: 1
+  lerpTurnRate: 0
+  circularFireRotationRate: 0
+  circularFireMode: 0
+  targetToTrack: {fileID: 0}
+  reloadSfxClip: {fileID: 8300000, guid: b0e60f748cffcdd4881f11184542fb91, type: 3}
+  emptySfxClip: {fileID: 8300000, guid: e76ae320e828da14b97520d5c704a4bf, type: 3}
+  shotFiredClip: {fileID: 0}
+  shooterType: 2
+  bulletOptionType: 3

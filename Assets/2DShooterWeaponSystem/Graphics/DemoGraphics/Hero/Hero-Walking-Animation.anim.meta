@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d1720590bc68e3e41b0d392c1d7ad241
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19922
+  packageName: 2D Shooter Bullet and Weapon System
+  packageVersion: 2.0.0
+  assetPath: Assets/2DShooterWeaponSystem/Graphics/DemoGraphics/Hero/Hero-Walking-Animation.anim
+  uploadId: 537312

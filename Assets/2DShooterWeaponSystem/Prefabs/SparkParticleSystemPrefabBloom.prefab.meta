@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 6b31788f571aa194e966cbf818fa2bfe
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19922
+  packageName: 2D Shooter Bullet and Weapon System
+  packageVersion: 2.0.0
+  assetPath: Assets/2DShooterWeaponSystem/Prefabs/SparkParticleSystemPrefabBloom.prefab
+  uploadId: 537312

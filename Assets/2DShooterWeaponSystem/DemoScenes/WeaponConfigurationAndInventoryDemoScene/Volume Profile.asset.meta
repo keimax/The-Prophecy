@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 7a3bdec4a81e6d246aa3b64712ac3bd4
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19922
+  packageName: 2D Shooter Bullet and Weapon System
+  packageVersion: 2.0.0
+  assetPath: Assets/2DShooterWeaponSystem/DemoScenes/WeaponConfigurationAndInventoryDemoScene/Volume
+    Profile.asset
+  uploadId: 537312

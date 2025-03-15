@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TheProphecy.Map.DungeonGeneration;
+using TheProphecy.Player; // Ensure this namespace is included
 using UnityEngine;
 
 namespace TheProphecy.LevelRun
@@ -11,21 +12,20 @@ namespace TheProphecy.LevelRun
         [SerializeField] private BasePlayer _basePlayer;
 
         public LevelRunStats levelRunStats;
-        
 
-        override protected void Awake()
+        protected override void Awake()
         {
             base.Awake();
             levelRunStats = new LevelRunStats();
-            _levelGenerator.GenerateDungeon();
+            _levelGenerator.GenerateDungeon(); // Generate the initial dungeon
         }
 
-        public void ResetLevel() {
-            _basePlayer.gameObject.SetActive(true);
-            _basePlayer.Resurrect();
-            levelRunStats.Reset();
-            _levelGenerator.GenerateDungeon();
+        public void ResetLevel()
+        {
+            _basePlayer.gameObject.SetActive(true); // Activate the player
+            _basePlayer.Resurrect(); // Reset player stats
+            levelRunStats.Reset(); // Reset level run stats
+            _levelGenerator.GenerateDungeon(); // Regenerate the dungeon
         }
-
     }
 }

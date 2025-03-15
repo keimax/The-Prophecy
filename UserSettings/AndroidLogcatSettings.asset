@@ -1,13 +1,386 @@
 {
-    "m_SelectedDeviceId": "",
-    "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+    "m_SelectedDeviceId": "R52X50D693F",
+    "m_SelectedProcess": {
+        "deviceId": "R52X50D693F",
+        "name": "com.SpaceCanary.EchoFleet",
+        "processId": 23274,
         "exited": false
     },
     "m_SelectedPriority": 0,
-    "m_KnownPackagesForSerialization": [],
+    "m_KnownProcessesForSerialization": [
+        {
+            "deviceId": "R52X50D693F",
+            "name": "com.spacecanary.echofleetmobile",
+            "processId": 27833,
+            "exited": false
+        },
+        {
+            "deviceId": "R52X50D693F",
+            "name": "com.spacecanary.echofleetmobile",
+            "processId": 31225,
+            "exited": false
+        },
+        {
+            "deviceId": "R52X50D693F",
+            "name": "com.spacecanary.echofleetmobile",
+            "processId": 2435,
+            "exited": false
+        },
+        {
+            "deviceId": "R52X50D693F",
+            "name": "com.spacecanary.echofleetmobile",
+            "processId": 5054,
+            "exited": false
+        },
+        {
+            "deviceId": "R52X50D693F",
+            "name": "com.spacecanary.echofleetmobile",
+            "processId": 5560,
+            "exited": false
+        },
+        {
+            "deviceId": "R52X50D693F",
+            "name": "com.spacecanary.echofleetmobile",
+            "processId": 5987,
+            "exited": false
+        },
+        {
+            "deviceId": "R52X50D693F",
+            "name": "com.spacecanary.echofleetmobile",
+            "processId": 7810,
+            "exited": false
+        },
+        {
+            "deviceId": "R52X50D693F",
+            "name": "com.spacecanary.echofleetmobile",
+            "processId": 9295,
+            "exited": false
+        },
+        {
+            "deviceId": "R52X50D693F",
+            "name": "com.spacecanary.echofleetmobile",
+            "processId": 9509,
+            "exited": false
+        },
+        {
+            "deviceId": "R52X50D693F",
+            "name": "com.spacecanary.echofleetmobile",
+            "processId": 14430,
+            "exited": false
+        },
+        {
+            "deviceId": "R52X50D693F",
+            "name": "com.spacecanary.echofleetmobile",
+            "processId": 19953,
+            "exited": false
+        },
+        {
+            "deviceId": "R52X50D693F",
+            "name": "com.spacecanary.echofleetmobile",
+            "processId": 24566,
+            "exited": false
+        },
+        {
+            "deviceId": "R52X50D693F",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 32463,
+            "exited": false
+        },
+        {
+            "deviceId": "R52X50D693F",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 5245,
+            "exited": false
+        },
+        {
+            "deviceId": "R52X50D693F",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 8645,
+            "exited": false
+        },
+        {
+            "deviceId": "R52X50D693F",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 9568,
+            "exited": false
+        },
+        {
+            "deviceId": "R52X50D693F",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 21526,
+            "exited": false
+        },
+        {
+            "deviceId": "R52X50D693F",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 20568,
+            "exited": false
+        },
+        {
+            "deviceId": "R52X50D693F",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 21223,
+            "exited": false
+        },
+        {
+            "deviceId": "R52X50D693F",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 22528,
+            "exited": false
+        },
+        {
+            "deviceId": "R52X50D693F",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 20716,
+            "exited": false
+        },
+        {
+            "deviceId": "R52X50D693F",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 22498,
+            "exited": false
+        },
+        {
+            "deviceId": "R52X50D693F",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 1858,
+            "exited": false
+        },
+        {
+            "deviceId": "R52X50D693F",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 3324,
+            "exited": false
+        },
+        {
+            "deviceId": "R52X50D693F",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 12417,
+            "exited": false
+        },
+        {
+            "deviceId": "R52X50D693F",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 13739,
+            "exited": false
+        },
+        {
+            "deviceId": "R52X50D693F",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 14478,
+            "exited": false
+        },
+        {
+            "deviceId": "R52X50D693F",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 23274,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.spacecanary.echofleetmobile",
+            "processId": 19633,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.spacecanary.echofleetmobile",
+            "processId": 24288,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.spacecanary.echofleetmobile",
+            "processId": 21314,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.spacecanary.echofleetmobile",
+            "processId": 22123,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.spacecanary.echofleetmobile",
+            "processId": 24212,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.spacecanary.echofleetmobile",
+            "processId": 27983,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.spacecanary.echofleetmobile",
+            "processId": 15902,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.spacecanary.echofleetmobile",
+            "processId": 27221,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.spacecanary.echofleetmobile",
+            "processId": 10126,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.spacecanary.echofleetmobile",
+            "processId": 14282,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.spacecanary.echofleetmobile",
+            "processId": 19143,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.spacecanary.echofleetmobile",
+            "processId": 22127,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 28047,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 29071,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 29769,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 30981,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 9837,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 10173,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 14389,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 21936,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 24101,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 27392,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 6794,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 10839,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 24546,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 25105,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 20628,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 25543,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 6305,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 10589,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 7429,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 27353,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 29081,
+            "exited": false
+        },
+        {
+            "deviceId": "37181FDJG00DDN",
+            "name": "com.SpaceCanary.EchoFleet",
+            "processId": 19592,
+            "exited": false
+        }
+    ],
     "m_Tags": {
         "m_Entries": [
             {
@@ -40,12 +413,26 @@
             }
         ]
     },
+    "m_ExtraWindowState": {
+        "Type": 0,
+        "Height": 0.0
+    },
     "m_MemoryViewerState": {
-        "MemoryWindowHeight": 0.0,
-        "MemoryWindowWidth": 0.0,
-        "MemoryTypeEnabled": [],
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
         "MemoryGroup": 2,
-        "Behavior": 0
+        "AutoCapture": true
     },
     "m_FilterOptions": {
         "m_Filter": "",
@@ -63,5 +450,28 @@
         "BitRateK": 20000,
         "DisplayIdEnabled": false,
         "DisplayId": ""
-    }
+    },
+    "m_ScreenCaptureSettings": {
+        "Mode": 0,
+        "m_LastSaveLocation": [
+            "C:\\Users\\user\\Documents\\GitHub\\The-Prophecy",
+            "C:\\Users\\user\\Documents\\GitHub\\The-Prophecy"
+        ]
+    },
+    "m_QueryLayoutSettings": {
+        "LastLayoutSaveLocation": "",
+        "LastScreenshotSaveLocation": ""
+    },
+    "m_InputSettings": {
+        "ShiftModifier": false,
+        "SendText": "",
+        "PosixKillSignal": 0,
+        "TargetProcess": {
+            "deviceId": "",
+            "name": "",
+            "processId": 0,
+            "exited": false
+        }
+    },
+    "m_AutoScroll": 0
 }

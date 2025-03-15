@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6a13b83e7e9deef46aecaf3e97f59039
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19922
+  packageName: 2D Shooter Bullet and Weapon System
+  packageVersion: 2.0.0
+  assetPath: Assets/2DShooterWeaponSystem/Scripts/DemoRelated/CameraLerpToTransform.cs
+  uploadId: 537312

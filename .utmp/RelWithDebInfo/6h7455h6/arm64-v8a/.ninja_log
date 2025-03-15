@@ -1,0 +1,12 @@
+# ninja log v5
+1	348	7566709938736306	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	ed5c27fcfddfb1ae
+349	461	7566709939936017	C:/Users/user/Documents/GitHub/The-Prophecy/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/6h7455h6/obj/arm64-v8a/libswappywrapper.so	97882637a7d34bf7
+40	2184	7577838752052528	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	eaa1fb0a684755c0
+29	2223	7577838752581780	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	9a95f8712b52d7f3
+10	2272	7577838752951320	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	78e1f0e27479a571
+51	2359	7577838753898253	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	3b927642b419807
+80	2485	7577838755258547	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	ddb78ae05591c4c0
+1	2609	7577838756440635	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	6e235b9941b2f36c
+64	2927	7577838759686256	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	319c1744f7534341
+19	3219	7577838762550593	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	9457791e353b18
+3219	3956	7577838768872505	C:/Users/user/Documents/GitHub/The-Prophecy/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/6h7455h6/obj/arm64-v8a/libgame.so	850af70a79564be1

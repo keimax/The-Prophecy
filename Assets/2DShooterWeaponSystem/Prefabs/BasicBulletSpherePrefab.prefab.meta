@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: f1696efee78eeec41aebb94067768c89
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19922
+  packageName: 2D Shooter Bullet and Weapon System
+  packageVersion: 2.0.0
+  assetPath: Assets/2DShooterWeaponSystem/Prefabs/BasicBulletSpherePrefab.prefab
+  uploadId: 537312

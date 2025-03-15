@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f81f11d9893d41e48ad4eb20f4f4d66c
+timeCreated: 1465380876
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19922
+  packageName: 2D Shooter Bullet and Weapon System
+  packageVersion: 2.0.0
+  assetPath: Assets/2DShooterWeaponSystem/Prefabs/ExplosionParticle.prefab
+  uploadId: 537312

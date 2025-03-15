@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 8826dd6431653064bb17b6a165dbf55c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19922
+  packageName: 2D Shooter Bullet and Weapon System
+  packageVersion: 2.0.0
+  assetPath: Assets/2DShooterWeaponSystem/Scripts/DemoRelated/GunPickup.cs
+  uploadId: 537312

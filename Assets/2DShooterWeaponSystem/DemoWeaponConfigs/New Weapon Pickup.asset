@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3a0773bacf905649a3715eea5f6d6c1, type: 3}
+  m_Name: New Weapon Pickup
+  m_EditorClassIdentifier: 
+  weaponName: New Weapon Pickup
+  bulletSpread: 0.1
+  bulletSpreadPingPongMax: 0
+  bulletSpreadPingPongMin: 0
+  spreadPingPongSpeed: 1
+  bulletSpacing: 1
+  bulletCount: 1
+  bulletRandomness: 0.15
+  bulletSpeed: 15
+  weaponFireRate: 0.055
+  weaponXOffset: 0.5
+  weaponYOffset: -0.25
+  ricochetChancePercent: 0.08
+  magazineChangeDelay: 0
+  bulletColour: {r: 1, g: 1, b: 1, a: 1}
+  weaponIcon: {fileID: 2800000, guid: c58874fc6b52d7e4193cddfa7d98dd5a, type: 3}
+  magazineSize: 0
+  magazineRemainingBullets: 0
+  ammoAvailable: 0
+  ammoUsed: 0
+  autoFire: 0
+  pingPongSpread: 0
+  richochetsEnabled: 0
+  hitEffectEnabled: 0
+  limitedAmmo: 0
+  usesMagazines: 0
+  isFirstEquip: 1
+  mirrorX: 0
+  bulletCountsAsAmmo: 0
+  playReloadingSfx: 0
+  playEmptySfx: 0
+  weaponRelativeToComponent: 0
+  trackingTurnRate: 0
+  lerpTurnRate: 0
+  circularFireRotationRate: 0
+  circularFireMode: 0
+  targetToTrack: {fileID: 0}
+  reloadSfxClip: {fileID: 0}
+  emptySfxClip: {fileID: 0}
+  shotFiredClip: {fileID: 8300000, guid: aced7a1ca2441484a8f50978b056932f, type: 3}
+  shooterType: 2
+  bulletOptionType: 1

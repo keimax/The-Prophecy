@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8e209f7477ff40e44a18820958f61d37
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19922
+  packageName: 2D Shooter Bullet and Weapon System
+  packageVersion: 2.0.0
+  assetPath: Assets/2DShooterWeaponSystem/Graphics/Materials/AdditiveParticleMaterial.mat
+  uploadId: 537312

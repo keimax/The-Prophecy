@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 94289c3d2dd1e8d41a6a648f1408118e
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19922
+  packageName: 2D Shooter Bullet and Weapon System
+  packageVersion: 2.0.0
+  assetPath: Assets/2DShooterWeaponSystem/Graphics/DemoGraphics/Hero/Hero-Idle-Animation.anim
+  uploadId: 537312

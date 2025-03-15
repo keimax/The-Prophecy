@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3a0773bacf905649a3715eea5f6d6c1, type: 3}
+  m_Name: Shotgun
+  m_EditorClassIdentifier: 
+  weaponName: Shotgun
+  bulletSpread: 0.45
+  bulletSpreadPingPongMax: 1
+  bulletSpreadPingPongMin: 0.1
+  spreadPingPongSpeed: 1
+  bulletSpacing: 0.05
+  bulletCount: 11
+  bulletRandomness: 0.42
+  bulletSpeed: 10
+  weaponFireRate: 0.8
+  weaponXOffset: 0.5
+  weaponYOffset: -0.25
+  ricochetChancePercent: 17
+  magazineChangeDelay: 1.2
+  bulletColour: {r: 1, g: 1, b: 1, a: 1}
+  weaponIcon: {fileID: 2800000, guid: 1a3a191d29ded0a47ad99dc206bcf742, type: 3}
+  magazineSize: 8
+  magazineRemainingBullets: 8
+  ammoAvailable: 300
+  ammoUsed: 8
+  autoFire: 0
+  pingPongSpread: 0
+  richochetsEnabled: 1
+  hitEffectEnabled: 1
+  limitedAmmo: 1
+  usesMagazines: 1
+  isFirstEquip: 1
+  mirrorX: 0
+  bulletCountsAsAmmo: 0
+  playReloadingSfx: 1
+  playEmptySfx: 1
+  weaponRelativeToComponent: 0
+  trackingTurnRate: 0
+  lerpTurnRate: 0
+  circularFireRotationRate: 0
+  circularFireMode: 0
+  targetToTrack: {fileID: 0}
+  reloadSfxClip: {fileID: 8300000, guid: c81b0f04afe96314d9893a269082eb0d, type: 3}
+  emptySfxClip: {fileID: 8300000, guid: e76ae320e828da14b97520d5c704a4bf, type: 3}
+  shotFiredClip: {fileID: 8300000, guid: 050cb3045ec922f4ead8b8753ca7f497, type: 3}
+  shooterType: 2
+  bulletOptionType: 3

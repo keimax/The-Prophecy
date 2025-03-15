@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 907fb09a96bc5e24595757f505b186ab
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19922
+  packageName: 2D Shooter Bullet and Weapon System
+  packageVersion: 2.0.0
+  assetPath: Assets/2DShooterWeaponSystem/DemoScenes/BloomRenderingAssets/PipelineAsset.asset
+  uploadId: 537312

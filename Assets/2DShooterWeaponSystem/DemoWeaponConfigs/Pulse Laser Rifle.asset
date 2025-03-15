@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3a0773bacf905649a3715eea5f6d6c1, type: 3}
+  m_Name: Pulse Laser Rifle
+  m_EditorClassIdentifier: 
+  weaponName: Pulse Laser Rifle
+  bulletSpread: 0
+  bulletSpreadPingPongMax: 0
+  bulletSpreadPingPongMin: 0
+  spreadPingPongSpeed: 1
+  bulletSpacing: 0.14
+  bulletCount: 1
+  bulletRandomness: 0.11
+  bulletSpeed: 19
+  weaponFireRate: 0.02
+  weaponXOffset: 0.5
+  weaponYOffset: -0.2
+  ricochetChancePercent: 0
+  magazineChangeDelay: 0
+  bulletColour: {r: 1, g: 0.1745283, b: 0.1745283, a: 1}
+  weaponIcon: {fileID: 2800000, guid: a9b111c35508cd24582584406862ab61, type: 3}
+  magazineSize: 0
+  magazineRemainingBullets: 0
+  ammoAvailable: 0
+  ammoUsed: 0
+  autoFire: 0
+  pingPongSpread: 0
+  richochetsEnabled: 0
+  hitEffectEnabled: 1
+  limitedAmmo: 0
+  usesMagazines: 0
+  isFirstEquip: 1
+  mirrorX: 0
+  bulletCountsAsAmmo: 0
+  playReloadingSfx: 0
+  playEmptySfx: 0
+  weaponRelativeToComponent: 0
+  trackingTurnRate: 0
+  lerpTurnRate: 0
+  circularFireRotationRate: 0
+  circularFireMode: 0
+  targetToTrack: {fileID: 0}
+  reloadSfxClip: {fileID: 0}
+  emptySfxClip: {fileID: 0}
+  shotFiredClip: {fileID: 0}
+  shooterType: 2
+  bulletOptionType: 4

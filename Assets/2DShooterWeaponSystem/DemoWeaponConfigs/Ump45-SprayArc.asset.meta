@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4c0a17bce7faa7f4c8af61757863a6ba
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19922
+  packageName: 2D Shooter Bullet and Weapon System
+  packageVersion: 2.0.0
+  assetPath: Assets/2DShooterWeaponSystem/DemoWeaponConfigs/Ump45-SprayArc.asset
+  uploadId: 537312

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 23a2d636e42f6fb4786cb1fcfe512787
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19922
+  packageName: 2D Shooter Bullet and Weapon System
+  packageVersion: 2.0.0
+  assetPath: Assets/2DShooterWeaponSystem/Graphics/DemoGraphics/Hero/Hero-idle-spritesheet.tps
+  uploadId: 537312

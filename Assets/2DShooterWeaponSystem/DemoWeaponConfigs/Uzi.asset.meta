@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fecd7ac7e06edf8498b3dd747d4301bb
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19922
+  packageName: 2D Shooter Bullet and Weapon System
+  packageVersion: 2.0.0
+  assetPath: Assets/2DShooterWeaponSystem/DemoWeaponConfigs/Uzi.asset
+  uploadId: 537312

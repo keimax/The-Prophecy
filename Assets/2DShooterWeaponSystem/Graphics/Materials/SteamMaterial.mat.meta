@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: dcd18e8ce24afd34c8c1e48673c82d35
+NativeFormatImporter:
+  userData: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19922
+  packageName: 2D Shooter Bullet and Weapon System
+  packageVersion: 2.0.0
+  assetPath: Assets/2DShooterWeaponSystem/Graphics/Materials/SteamMaterial.mat
+  uploadId: 537312
