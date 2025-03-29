@@ -63,7 +63,7 @@ namespace TheProphecy.Enemy
 
         private void FireBullet()
         {
-            int bulletInitialDegree = -90;
+            int bulletInitialDegree = 0;
             float directionAngle = Vector2.SignedAngle(Vector2.right, _direction);
 
             GameObject bullet = _pool.GetFromPool();

@@ -93,8 +93,12 @@ public class EnemyShip : MonoBehaviour
 
         if (playerInRange != null)
         {
-            target = playerInRange.gameObject;
-            isIdle = false;
+            if(playerInRange.gameObject.tag == "Player")
+            {
+                target = playerInRange.gameObject;
+                isIdle = false;
+            }
+       
         }
         else
         {

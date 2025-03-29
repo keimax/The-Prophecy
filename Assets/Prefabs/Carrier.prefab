@@ -1008,7 +1008,7 @@ GameObject:
   - component: {fileID: 7965438777019745706}
   - component: {fileID: 5709632146677717796}
   m_Layer: 16
-  m_Name: BasicEnemy 1 (4)
+  m_Name: CarrierBattleShipSmall2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1023,8 +1023,8 @@ Transform:
   m_GameObject: {fileID: 3950206389397907790}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.9123274, w: 0.4094616}
-  m_LocalPosition: {x: -2.07, y: 1.74, z: 0}
-  m_LocalScale: {x: 0.17, y: 0.17, z: 0.17}
+  m_LocalPosition: {x: -2.07, y: 1.74, z: 6}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7915999115859418608}
@@ -1042,12 +1042,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc13e5b2ff07db84db678b2f702219c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MAX_HEALTH: 11
-  _health: 0
+  MAX_HEALTH: 3
+  _health: 3
   MAX_SHIELD: 0
   _shield: 0
   _minCoinDropRate: 0
   _maxCoinDropRate: 5
+  _minXPDrop: 1
+  _maxXPDrop: 100
+  _hitPrefab: {fileID: 100000, guid: b8610f4e28596594796dc0cd81578316, type: 3}
+  _explodePrefab: {fileID: 8511029384932460422, guid: 76ef512735c763742877edb60f3e9fa1,
+    type: 3}
+  _smokePrefab: {fileID: 0}
 --- !u!212 &3950206389397907831
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1113,7 +1119,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3950206389397907790}
   m_BodyType: 0
-  m_Simulated: 1
+  m_Simulated: 0
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 50
@@ -1196,9 +1202,9 @@ MonoBehaviour:
   _bulletSpeed: 7
   _autoAim: 1
   _autoShoot: 1
-  _autoAimRange: 7
-  _aimToleranceAngle: 12
-  _shootingRange: 5
+  _autoAimRange: 9
+  _aimToleranceAngle: 5
+  _shootingRange: 7
 --- !u!114 &5709632146677717796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1211,19 +1217,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a15e0085cba0e4d93c9cdda700527b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 15
-  detectionRadius: 55
+  movementSpeed: 140
+  detectionRadius: 60
   playerLayer:
     serializedVersion: 2
     m_Bits: 512
-  pursueDistance: 22
+  pursueDistance: 25
   circleDistance: 4
-  minDistance: 3
-  repulsionMultiplier: 2.5
-  wanderRadius: 10
-  wanderChangeInterval: 5
-  maxRotationSpeed: 120
-  rotationAcceleration: 90
+  minDistance: 4
+  repulsionMultiplier: 3
+  wanderRadius: 12
+  wanderChangeInterval: 8
+  maxRotationSpeed: 100
+  rotationAcceleration: 50
+  target: {fileID: 0}
 --- !u!1 &4174619450264265966
 GameObject:
   m_ObjectHideFlags: 0
@@ -1535,7 +1542,7 @@ GameObject:
   - component: {fileID: 2026575155026799091}
   - component: {fileID: 5238580910598676110}
   m_Layer: 16
-  m_Name: BasicEnemy 1 (5)
+  m_Name: CarrierBattleShipSmall3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1550,8 +1557,8 @@ Transform:
   m_GameObject: {fileID: 4919277456594634007}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.92019737, w: 0.39145476}
-  m_LocalPosition: {x: -2.14, y: 0.1, z: 0}
-  m_LocalScale: {x: 0.17, y: 0.17, z: 0.17}
+  m_LocalPosition: {x: -2.14, y: 0.1, z: 6}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2255877086226428329}
@@ -1569,12 +1576,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc13e5b2ff07db84db678b2f702219c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MAX_HEALTH: 11
-  _health: 0
+  MAX_HEALTH: 3
+  _health: 3
   MAX_SHIELD: 0
   _shield: 0
   _minCoinDropRate: 0
   _maxCoinDropRate: 5
+  _minXPDrop: 1
+  _maxXPDrop: 100
+  _hitPrefab: {fileID: 100000, guid: b8610f4e28596594796dc0cd81578316, type: 3}
+  _explodePrefab: {fileID: 8511029384932460422, guid: 76ef512735c763742877edb60f3e9fa1,
+    type: 3}
+  _smokePrefab: {fileID: 0}
 --- !u!212 &4919277456594634030
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1640,7 +1653,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4919277456594634007}
   m_BodyType: 0
-  m_Simulated: 1
+  m_Simulated: 0
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 50
@@ -1723,9 +1736,9 @@ MonoBehaviour:
   _bulletSpeed: 7
   _autoAim: 1
   _autoShoot: 1
-  _autoAimRange: 7
-  _aimToleranceAngle: 12
-  _shootingRange: 5
+  _autoAimRange: 9
+  _aimToleranceAngle: 5
+  _shootingRange: 7
 --- !u!114 &5238580910598676110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1738,19 +1751,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a15e0085cba0e4d93c9cdda700527b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 15
-  detectionRadius: 55
+  movementSpeed: 140
+  detectionRadius: 60
   playerLayer:
     serializedVersion: 2
     m_Bits: 512
-  pursueDistance: 22
+  pursueDistance: 25
   circleDistance: 4
-  minDistance: 3
-  repulsionMultiplier: 2.5
-  wanderRadius: 10
-  wanderChangeInterval: 5
-  maxRotationSpeed: 120
-  rotationAcceleration: 90
+  minDistance: 4
+  repulsionMultiplier: 3
+  wanderRadius: 12
+  wanderChangeInterval: 8
+  maxRotationSpeed: 100
+  rotationAcceleration: 50
+  target: {fileID: 0}
 --- !u!1 &5119454042885044650
 GameObject:
   m_ObjectHideFlags: 0
@@ -2147,7 +2161,7 @@ GameObject:
   - component: {fileID: 4232980513931476149}
   - component: {fileID: 8862559714632238821}
   m_Layer: 16
-  m_Name: BasicEnemy 1 (2)
+  m_Name: CarrierBattleShipSmall5
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2162,8 +2176,8 @@ Transform:
   m_GameObject: {fileID: 7126258996098437201}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0000001854322, y: 0.00000032537739, z: 0.8688205, w: -0.4951273}
-  m_LocalPosition: {x: 2.11, y: 1.76, z: -8.631984e-14}
-  m_LocalScale: {x: 0.17, y: 0.17, z: 0.17}
+  m_LocalPosition: {x: 2.11, y: 1.76, z: 6}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4174619450264265967}
@@ -2181,12 +2195,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc13e5b2ff07db84db678b2f702219c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MAX_HEALTH: 11
-  _health: 0
+  MAX_HEALTH: 3
+  _health: 3
   MAX_SHIELD: 0
   _shield: 0
   _minCoinDropRate: 0
   _maxCoinDropRate: 5
+  _minXPDrop: 1
+  _maxXPDrop: 100
+  _hitPrefab: {fileID: 100000, guid: b8610f4e28596594796dc0cd81578316, type: 3}
+  _explodePrefab: {fileID: 8511029384932460422, guid: 76ef512735c763742877edb60f3e9fa1,
+    type: 3}
+  _smokePrefab: {fileID: 0}
 --- !u!212 &7126258996098437224
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2252,7 +2272,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7126258996098437201}
   m_BodyType: 0
-  m_Simulated: 1
+  m_Simulated: 0
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 50
@@ -2335,9 +2355,9 @@ MonoBehaviour:
   _bulletSpeed: 7
   _autoAim: 1
   _autoShoot: 1
-  _autoAimRange: 7
-  _aimToleranceAngle: 12
-  _shootingRange: 5
+  _autoAimRange: 9
+  _aimToleranceAngle: 5
+  _shootingRange: 7
 --- !u!114 &8862559714632238821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2350,19 +2370,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a15e0085cba0e4d93c9cdda700527b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 15
-  detectionRadius: 55
+  movementSpeed: 140
+  detectionRadius: 60
   playerLayer:
     serializedVersion: 2
     m_Bits: 512
-  pursueDistance: 22
+  pursueDistance: 25
   circleDistance: 4
-  minDistance: 3
-  repulsionMultiplier: 2.5
-  wanderRadius: 10
-  wanderChangeInterval: 5
-  maxRotationSpeed: 120
-  rotationAcceleration: 90
+  minDistance: 4
+  repulsionMultiplier: 3
+  wanderRadius: 12
+  wanderChangeInterval: 8
+  maxRotationSpeed: 100
+  rotationAcceleration: 50
+  target: {fileID: 0}
 --- !u!1 &7884736663862286107
 GameObject:
   m_ObjectHideFlags: 0
@@ -2379,7 +2400,7 @@ GameObject:
   - component: {fileID: 3834579431690255359}
   - component: {fileID: 8093143266390853331}
   m_Layer: 16
-  m_Name: BasicEnemy 1
+  m_Name: CarrierBattleShipSmall
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2394,8 +2415,8 @@ Transform:
   m_GameObject: {fileID: 7884736663862286107}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.9276631, w: 0.3734183}
-  m_LocalPosition: {x: -2.04, y: 3.28, z: 0}
-  m_LocalScale: {x: 0.17, y: 0.17, z: 0.17}
+  m_LocalPosition: {x: -2.04, y: 3.28, z: 6}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3919964222520533925}
@@ -2413,12 +2434,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc13e5b2ff07db84db678b2f702219c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MAX_HEALTH: 11
-  _health: 0
+  MAX_HEALTH: 3
+  _health: 3
   MAX_SHIELD: 0
   _shield: 0
   _minCoinDropRate: 0
   _maxCoinDropRate: 5
+  _minXPDrop: 1
+  _maxXPDrop: 100
+  _hitPrefab: {fileID: 100000, guid: b8610f4e28596594796dc0cd81578316, type: 3}
+  _explodePrefab: {fileID: 8511029384932460422, guid: 76ef512735c763742877edb60f3e9fa1,
+    type: 3}
+  _smokePrefab: {fileID: 0}
 --- !u!212 &7884736663862286114
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2484,7 +2511,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7884736663862286107}
   m_BodyType: 0
-  m_Simulated: 1
+  m_Simulated: 0
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 50
@@ -2567,9 +2594,9 @@ MonoBehaviour:
   _bulletSpeed: 7
   _autoAim: 1
   _autoShoot: 1
-  _autoAimRange: 7
-  _aimToleranceAngle: 12
-  _shootingRange: 5
+  _autoAimRange: 9
+  _aimToleranceAngle: 5
+  _shootingRange: 7
 --- !u!114 &8093143266390853331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2582,19 +2609,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a15e0085cba0e4d93c9cdda700527b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 15
-  detectionRadius: 55
+  movementSpeed: 140
+  detectionRadius: 60
   playerLayer:
     serializedVersion: 2
     m_Bits: 512
-  pursueDistance: 22
+  pursueDistance: 25
   circleDistance: 4
-  minDistance: 3
-  repulsionMultiplier: 2.5
-  wanderRadius: 10
-  wanderChangeInterval: 5
-  maxRotationSpeed: 120
-  rotationAcceleration: 90
+  minDistance: 4
+  repulsionMultiplier: 3
+  wanderRadius: 12
+  wanderChangeInterval: 8
+  maxRotationSpeed: 100
+  rotationAcceleration: 50
+  target: {fileID: 0}
 --- !u!1 &7915999115859418609
 GameObject:
   m_ObjectHideFlags: 0
@@ -2901,7 +2929,6 @@ GameObject:
   - component: {fileID: 8431976804696403846}
   - component: {fileID: 8431976804696403840}
   - component: {fileID: 8431976804696403843}
-  - component: {fileID: 6044728247914999507}
   - component: {fileID: 8431976804696403901}
   - component: {fileID: 8431976804696403847}
   - component: {fileID: 8431976804696403900}
@@ -2927,9 +2954,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 19.5, y: -26.5, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 2045111319013838590}
   - {fileID: 7884736663862286105}
   - {fileID: 3950206389397907788}
   - {fileID: 4919277456594634005}
@@ -2952,12 +2980,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc13e5b2ff07db84db678b2f702219c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MAX_HEALTH: 300
-  _health: 0
-  MAX_SHIELD: 125
-  _shield: 0
+  MAX_HEALTH: 111
+  _health: 111
+  MAX_SHIELD: 11
+  _shield: 11
   _minCoinDropRate: 0
   _maxCoinDropRate: 5
+  _minXPDrop: 100
+  _maxXPDrop: 500
+  _hitPrefab: {fileID: 100000, guid: b8610f4e28596594796dc0cd81578316, type: 3}
+  _explodePrefab: {fileID: 3698288996132585460, guid: 87a6e9fe7ad1ba548a59aa2b081f096c,
+    type: 3}
+  _smokePrefab: {fileID: 2050602192841992502}
 --- !u!114 &8431976804696403843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2970,26 +3004,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f455fe45607f483498fb8e59f1565577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _moveSpeed: 4
   enableIdle: 1
   idleRange: 3
   idleSpeed: 2
+  _idleChangeInterval: 2
   enableAvoidance: 0
   minDistance: 1.5
   repulsionMultiplier: 1.5
---- !u!114 &6044728247914999507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8431976804696403844}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12f29d7afe2985d4398679c7a5f63525, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _damage: 1
-  _damageDelay: 0.5
 --- !u!212 &8431976804696403901
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3058,7 +3080,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 40
+  m_Mass: 50
   m_LinearDamping: 20
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -3197,8 +3219,8 @@ MonoBehaviour:
   - {fileID: 9110413056865756810}
   - {fileID: 7126258996098437201}
   - {fileID: 8765049105658957733}
-  launchForce: 150
-  fireDelay: 2
+  launchForce: 50000
+  fireDelay: 1
   detectionRadius: 10
   playerLayer:
     serializedVersion: 2
@@ -3232,19 +3254,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a15e0085cba0e4d93c9cdda700527b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 15
+  movementSpeed: 5
   detectionRadius: 55
   playerLayer:
     serializedVersion: 2
     m_Bits: 512
-  pursueDistance: 44
+  pursueDistance: 30
   circleDistance: 15
-  minDistance: 3
+  minDistance: 8
   repulsionMultiplier: 1
   wanderRadius: 11
   wanderChangeInterval: 5
   maxRotationSpeed: 22
-  rotationAcceleration: 111
+  rotationAcceleration: 2
+  target: {fileID: 0}
 --- !u!1 &8765049105658957733
 GameObject:
   m_ObjectHideFlags: 0
@@ -3261,7 +3284,7 @@ GameObject:
   - component: {fileID: 2447893510548906817}
   - component: {fileID: 7739587203752483659}
   m_Layer: 16
-  m_Name: BasicEnemy 1 (3)
+  m_Name: CarrierBattleShipSmall6
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3276,8 +3299,8 @@ Transform:
   m_GameObject: {fileID: 8765049105658957733}
   serializedVersion: 2
   m_LocalRotation: {x: -0.00000015306512, y: 0.0000003417991, z: 0.9126685, w: -0.4087006}
-  m_LocalPosition: {x: 2.14, y: 0.09, z: -0}
-  m_LocalScale: {x: 0.17, y: 0.17, z: 0.17}
+  m_LocalPosition: {x: 2.14, y: 0.09, z: 6}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2497528780855802651}
@@ -3295,12 +3318,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc13e5b2ff07db84db678b2f702219c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MAX_HEALTH: 11
-  _health: 0
+  MAX_HEALTH: 3
+  _health: 3
   MAX_SHIELD: 0
   _shield: 0
   _minCoinDropRate: 0
   _maxCoinDropRate: 5
+  _minXPDrop: 1
+  _maxXPDrop: 100
+  _hitPrefab: {fileID: 100000, guid: b8610f4e28596594796dc0cd81578316, type: 3}
+  _explodePrefab: {fileID: 8511029384932460422, guid: 76ef512735c763742877edb60f3e9fa1,
+    type: 3}
+  _smokePrefab: {fileID: 0}
 --- !u!212 &8765049105658957724
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3366,7 +3395,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8765049105658957733}
   m_BodyType: 0
-  m_Simulated: 1
+  m_Simulated: 0
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 50
@@ -3449,9 +3478,9 @@ MonoBehaviour:
   _bulletSpeed: 7
   _autoAim: 1
   _autoShoot: 1
-  _autoAimRange: 7
-  _aimToleranceAngle: 12
-  _shootingRange: 5
+  _autoAimRange: 9
+  _aimToleranceAngle: 5
+  _shootingRange: 7
 --- !u!114 &7739587203752483659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3464,19 +3493,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a15e0085cba0e4d93c9cdda700527b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 15
-  detectionRadius: 55
+  movementSpeed: 140
+  detectionRadius: 60
   playerLayer:
     serializedVersion: 2
     m_Bits: 512
-  pursueDistance: 22
+  pursueDistance: 25
   circleDistance: 4
-  minDistance: 3
-  repulsionMultiplier: 2.5
-  wanderRadius: 10
-  wanderChangeInterval: 5
-  maxRotationSpeed: 120
-  rotationAcceleration: 90
+  minDistance: 4
+  repulsionMultiplier: 3
+  wanderRadius: 12
+  wanderChangeInterval: 8
+  maxRotationSpeed: 100
+  rotationAcceleration: 50
+  target: {fileID: 0}
 --- !u!1 &9110413056865756810
 GameObject:
   m_ObjectHideFlags: 0
@@ -3493,7 +3523,7 @@ GameObject:
   - component: {fileID: 2753300204319427182}
   - component: {fileID: 1546753947504508020}
   m_Layer: 16
-  m_Name: BasicEnemy 1 (1)
+  m_Name: CarrierBattleShipSmall4
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3508,8 +3538,8 @@ Transform:
   m_GameObject: {fileID: 9110413056865756810}
   serializedVersion: 2
   m_LocalRotation: {x: -0.00000016940751, y: 0.0000003340012, z: 0.89184654, w: -0.45233825}
-  m_LocalPosition: {x: 2.14, y: 3.24, z: -8.631984e-14}
-  m_LocalScale: {x: 0.17, y: 0.17, z: 0.17}
+  m_LocalPosition: {x: 2.14, y: 3.24, z: 6}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2694283899487474228}
@@ -3527,12 +3557,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc13e5b2ff07db84db678b2f702219c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MAX_HEALTH: 11
-  _health: 0
+  MAX_HEALTH: 3
+  _health: 3
   MAX_SHIELD: 0
   _shield: 0
   _minCoinDropRate: 0
   _maxCoinDropRate: 5
+  _minXPDrop: 1
+  _maxXPDrop: 100
+  _hitPrefab: {fileID: 100000, guid: b8610f4e28596594796dc0cd81578316, type: 3}
+  _explodePrefab: {fileID: 8511029384932460422, guid: 76ef512735c763742877edb60f3e9fa1,
+    type: 3}
+  _smokePrefab: {fileID: 0}
 --- !u!212 &9110413056865756851
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3598,7 +3634,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9110413056865756810}
   m_BodyType: 0
-  m_Simulated: 1
+  m_Simulated: 0
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 50
@@ -3681,9 +3717,9 @@ MonoBehaviour:
   _bulletSpeed: 7
   _autoAim: 1
   _autoShoot: 1
-  _autoAimRange: 7
-  _aimToleranceAngle: 12
-  _shootingRange: 5
+  _autoAimRange: 9
+  _aimToleranceAngle: 5
+  _shootingRange: 7
 --- !u!114 &1546753947504508020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3696,19 +3732,105 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61a15e0085cba0e4d93c9cdda700527b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 15
-  detectionRadius: 55
+  movementSpeed: 140
+  detectionRadius: 60
   playerLayer:
     serializedVersion: 2
     m_Bits: 512
-  pursueDistance: 22
+  pursueDistance: 25
   circleDistance: 4
-  minDistance: 3
-  repulsionMultiplier: 2.5
-  wanderRadius: 10
-  wanderChangeInterval: 5
-  maxRotationSpeed: 120
-  rotationAcceleration: 90
+  minDistance: 4
+  repulsionMultiplier: 3
+  wanderRadius: 12
+  wanderChangeInterval: 8
+  maxRotationSpeed: 100
+  rotationAcceleration: 50
+  target: {fileID: 0}
+--- !u!1001 &2426897194349266286
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8431976804696403846}
+    m_Modifications:
+    - target: {fileID: 4453958650518031248, guid: 3c3201c81842524449eb9ecf62b1ce4c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4453958650518031248, guid: 3c3201c81842524449eb9ecf62b1ce4c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4453958650518031248, guid: 3c3201c81842524449eb9ecf62b1ce4c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4453958650518031248, guid: 3c3201c81842524449eb9ecf62b1ce4c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.22607218
+      objectReference: {fileID: 0}
+    - target: {fileID: 4453958650518031248, guid: 3c3201c81842524449eb9ecf62b1ce4c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.9270087
+      objectReference: {fileID: 0}
+    - target: {fileID: 4453958650518031248, guid: 3c3201c81842524449eb9ecf62b1ce4c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.29529357
+      objectReference: {fileID: 0}
+    - target: {fileID: 4453958650518031248, guid: 3c3201c81842524449eb9ecf62b1ce4c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.04845509
+      objectReference: {fileID: 0}
+    - target: {fileID: 4453958650518031248, guid: 3c3201c81842524449eb9ecf62b1ce4c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -206.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4453958650518031248, guid: 3c3201c81842524449eb9ecf62b1ce4c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -357.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4453958650518031248, guid: 3c3201c81842524449eb9ecf62b1ce4c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 4457193604048186456, guid: 3c3201c81842524449eb9ecf62b1ce4c,
+        type: 3}
+      propertyPath: m_Name
+      value: SmokeEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 4457193604048186456, guid: 3c3201c81842524449eb9ecf62b1ce4c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3c3201c81842524449eb9ecf62b1ce4c, type: 3}
+--- !u!4 &2045111319013838590 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4453958650518031248, guid: 3c3201c81842524449eb9ecf62b1ce4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2426897194349266286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2050602192841992502 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4457193604048186456, guid: 3c3201c81842524449eb9ecf62b1ce4c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2426897194349266286}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6956628564340319217
 PrefabInstance:
   m_ObjectHideFlags: 0

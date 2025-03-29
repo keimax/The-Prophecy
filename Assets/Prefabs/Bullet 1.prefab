@@ -184,6 +184,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 65536
   _lifetime: 3
+  _hitPrefab: {fileID: 100000, guid: b8610f4e28596594796dc0cd81578316, type: 3}
 --- !u!1001 &2222273515754415166
 PrefabInstance:
   m_ObjectHideFlags: 0

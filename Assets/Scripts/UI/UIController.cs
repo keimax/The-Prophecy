@@ -22,6 +22,7 @@ public class UIController : MonoBehaviour
     private PlayerInput _playerInput;
     private InputAction _moveAction;
     private InputAction _clickAction;
+    private InputAction _clickSettingsAction;
 
     public event Action OnUIClicked;
     public event Action<Vector2> OnMoveInput;
@@ -40,6 +41,7 @@ public class UIController : MonoBehaviour
         {
             _moveAction = _playerInput.actions["Move"];
             _clickAction = _playerInput.actions["UIClick"];
+            _clickSettingsAction = _playerInput.actions["SettingsClick"];
         }
 
         RefreshUIElements();
@@ -52,6 +54,9 @@ public class UIController : MonoBehaviour
 
         if (_clickAction != null)
             _clickAction.performed += OnUIClick;
+
+        if (_clickSettingsAction != null)
+            _clickSettingsAction.performed += OnSettingsClick;
     }
 
     private void OnDisable()
@@ -61,6 +66,9 @@ public class UIController : MonoBehaviour
 
         if (_clickAction != null)
             _clickAction.performed -= OnUIClick;
+
+        if (_clickSettingsAction != null)
+            _clickSettingsAction.performed -= OnSettingsClick;
     }
 
     public void RefreshUIElements()
@@ -109,7 +117,7 @@ public class UIController : MonoBehaviour
 
     private IEnumerator ResetMoveCooldown()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.25f);
         _canMove = true;
     }
 
@@ -172,6 +180,15 @@ public class UIController : MonoBehaviour
         if (button.TryGetComponent(out Image image))
             image.color = color;
     }
+
+
+
+    private void OnSettingsClick(InputAction.CallbackContext context)
+    {
+        Debug.Log("Settings action performed!");
+        ToggleInventoryScreen(!_inventoryUI.activeSelf);
+    }
+
 
     private void OnUIClick(InputAction.CallbackContext context)
     {

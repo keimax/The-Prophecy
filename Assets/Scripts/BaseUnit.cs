@@ -20,7 +20,7 @@ public abstract class BaseUnit : MonoBehaviour
         {
             _health = Mathf.Clamp(value, 0, MAX_HEALTH);
             UpdateHealthBar(); // Update health bar when health changes
-            Debug.Log($"Health set to: {_health}"); // Added logging
+          //  Debug.Log($"Health set to: {_health}"); // Added logging
         }
     }
 
@@ -31,7 +31,7 @@ public abstract class BaseUnit : MonoBehaviour
         {
             _shield = Mathf.Clamp(value, 0, MAX_SHIELD);
             UpdateShieldBar(); // Update shield bar when shield changes
-            Debug.Log($"Shield set to: {_shield}"); // Added logging
+        //    Debug.Log($"Shield set to: {_shield}"); // Added logging
         }
     }
 
@@ -42,7 +42,7 @@ public abstract class BaseUnit : MonoBehaviour
     {
         health = MAX_HEALTH; // Initialize health
         shield = MAX_SHIELD; // Initialize shield
-        Debug.Log($"BaseUnit initialized with Health: {health}, Shield: {shield}");
+     //   Debug.Log($"BaseUnit initialized with Health: {health}, Shield: {shield}");
     }
 
     protected virtual void UpdateHealthBar() { /* To be overridden in derived classes */ }
@@ -52,6 +52,6 @@ public abstract class BaseUnit : MonoBehaviour
     {
         isAlive = false; // Set alive status to false
         gameObject.SetActive(false); // Deactivate the object
-        Debug.Log($"{gameObject.name} has died.");
+     //   Debug.Log($"{gameObject.name} has died.");
     }
 }

@@ -6,7 +6,7 @@ namespace TheProphecy.Player
     public class ShootingController : MonoBehaviour
     {
         public static ObjectPool _pool;
-        private Vector2 _direction = new Vector2(1, 0);
+        private Vector2 _direction = new Vector2(0, 1); // Default facing north
 
         [Header("References")]
         [SerializeField] private VirtualJoystick _aimJoystick;
@@ -28,7 +28,7 @@ namespace TheProphecy.Player
         [SerializeField] private float _autoAimRange = 10f; // Range for auto aim
 
         [Header("Shooting Angle")]
-        [SerializeField] private float _aimToleranceAngle = 15f; // Degrees
+        [SerializeField] private float _aimToleranceAngle = 45f; // Degrees (±45 degrees)
         [SerializeField] private float _shootingRange = 5f; // Maximum shooting range
 
         [Header("Arc Visualization")]
@@ -38,15 +38,11 @@ namespace TheProphecy.Player
 
         void Start()
         {
-
             _enemyContainer = GameManager.Instance.EnemyContainer.transform;
             _projectileContainer = GameManager.Instance.PlayerContainer;
 
             _pool = new ObjectPool(_bulletPrefab, _projectileContainer);
             _pool.FillThePool(30);
-
-
-           
 
             Debug.Log("ShootingController Start");
             Debug.Log(_enemyContainer);
@@ -71,46 +67,70 @@ namespace TheProphecy.Player
 
         public void ShootProjectile()
         {
+            Vector2 targetDirection;
+
             if (_aimJoystick == null)
             {
                 // Auto aim
-                _direction = GetClosestEnemyDirection();
+                targetDirection = GetClosestEnemyDirection();
 
-                // If we have a valid direction and the enemy is within shooting range, fire
-                if (_direction != Vector2.zero && !_isFireOnCooldown && Vector3.Distance(transform.position, transform.position + (Vector3)_direction) <= _shootingRange)
+                // Check if we have a valid direction
+                if (targetDirection != Vector2.zero)
                 {
-                    FireBullet();
+                    // Calculate the angle between the ship's forward direction and the target direction
+                    float angleToEnemy = Vector2.SignedAngle(transform.up, targetDirection);
+                //    Debug.Log($"Auto Aim - Target Direction: {targetDirection}, Angle to Enemy: {angleToEnemy}");
+
+                    // Check if the angle is within the allowed range
+                    if (angleToEnemy >= -_aimToleranceAngle && angleToEnemy <= _aimToleranceAngle && !_isFireOnCooldown)
+                    {
+                        FireBullet(targetDirection); // Pass the target direction
+                    }
+                    else
+                    {
+                    }
                 }
             }
             else
             {
                 // Get joystick direction
-                _direction = _aimJoystick.Direction;
+                _direction = _aimJoystick.Direction.normalized;
 
                 if (_direction.magnitude > 0.1f) // Check if joystick is moved significantly
                 {
-                    Vector2 closestPointDirection = GetClosestEnemyDirection();
-                    float angleToEnemy = Vector2.Angle(_direction, closestPointDirection);
+                    targetDirection = GetClosestEnemyDirection();
+                    float angleToEnemy = Vector2.SignedAngle(transform.up, targetDirection);
+                    Debug.Log($"Joystick Aim - Direction: {_direction}, Target Direction: {targetDirection}, Angle to Enemy: {angleToEnemy}");
 
-                    // Check if the enemy is within shooting range
-                    if (angleToEnemy <= _aimToleranceAngle && !_isFireOnCooldown && Vector3.Distance(transform.position, transform.position + (Vector3)closestPointDirection) <= _shootingRange)
+                    // Check if the angle is within the allowed range
+                    if (angleToEnemy >= -_aimToleranceAngle && angleToEnemy <= _aimToleranceAngle && !_isFireOnCooldown)
                     {
-                        FireBullet();
+                        FireBullet(targetDirection); // Pass the target direction
+                    }
+                    else
+                    {
                     }
                 }
             }
         }
 
-        private void FireBullet()
+        private void FireBullet(Vector2 targetDirection)
         {
-            int bulletInitialDegree = 0;//-90;
-            float directionAngle = Vector2.SignedAngle(Vector2.right, _direction);
-
             GameObject bullet = _pool.GetFromPool();
             Bullets bulletScript = bullet.GetComponent<Bullets>();
 
-            bulletScript.FireAndMove(_bow.transform.position, _direction.normalized, directionAngle + bulletInitialDegree, _bulletSpeed);
+            // Calculate the angle of the direction vector
+            float angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
+
+            // Set the bullet's rotation
+            bullet.transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+
+            // Fire the bullet in the direction of the target
+            bulletScript.FireAndMove(_bow.transform.position, targetDirection.normalized, angle, _bulletSpeed);
             _isFireOnCooldown = true;
+
+            // Debug log for firing
+            Debug.Log($"Bullet Fired! Direction: {targetDirection.normalized}, Angle: {angle}");
         }
 
         private void CalculateFireCooldown()
@@ -165,7 +185,7 @@ namespace TheProphecy.Player
             {
                 float angle = startAngle + i * angleStep;
                 Quaternion rotation = Quaternion.Euler(0, 0, angle);
-                Vector3 point = rotation * Vector3.right * _arcRadius;
+                Vector3 point = rotation * Vector3.up * _arcRadius; // Using Vector3.up for top-down
                 _lineRenderer.SetPosition(i, transform.position + point);
             }
         }

@@ -27,7 +27,7 @@ namespace TheProphecy.Enemy
         private float _pathUpdateTimer = 0f;
 
         private int _currentCheckPointIndex = 0;
-        private float _moveSpeed = 4f;
+        [SerializeField] private float _moveSpeed = 4f; // Adjustable in the inspector
 
         private float _range = 9f;
         private bool _isInRange = false;
@@ -40,7 +40,7 @@ namespace TheProphecy.Enemy
         private Vector3 _spawnPoint; // Initial spawn point
         private Vector3 _idleTarget; // Target point for idle movement
         private float _idleTimer = 0f;
-        private float _idleChangeInterval = 2f; // Time interval to change idle target
+        [SerializeField] private float _idleChangeInterval = 2f; // Time interval to change idle target
 
         // Avoidance parameters
         [Header("Avoidance Settings")]

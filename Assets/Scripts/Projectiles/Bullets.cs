@@ -17,6 +17,8 @@ namespace TheProphecy
         private Rigidbody2D _rigidbody;
         private ObjectPool _pool;
 
+        [SerializeField] private GameObject _hitPrefab;
+
         private void Awake()
         {
             _rigidbody = GetComponent<Rigidbody2D>();
@@ -29,19 +31,14 @@ namespace TheProphecy
 
             if (_currentLifetime <= 0)
             {
-            //  UnityEngine.Debug.Log("lifetime 0 return to pool");
                 if (_pool == null)
                 {
-                //  UnityEngine.Debug.Log("pool is null");
                     Destroy(this.gameObject);
                 }
                 else
                 {
-                //  UnityEngine.Debug.Log("pool is legit");
+                    _pool?.AddToPool(gameObject);
                 }
-
-
-                _pool?.AddToPool(gameObject);
             }
         }
 
@@ -61,6 +58,10 @@ namespace TheProphecy
             {
                 if (collision.TryGetComponent<IDamageable>(out IDamageable iDamageable))
                 {
+                    if (_hitPrefab != null)
+                    {
+                        GameObject.Destroy(GameObject.Instantiate(_hitPrefab, transform.position, Quaternion.identity), 1f);
+                    }
                     iDamageable.OnTakeDamage(_damage);
                 }
 
@@ -74,3 +75,4 @@ namespace TheProphecy
         }
     }
 }
+

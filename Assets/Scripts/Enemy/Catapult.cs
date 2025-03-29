@@ -63,6 +63,9 @@ public class Catapult : MonoBehaviour
                     if (GameObject.Find("PlayerContainer").transform)
                         cargo.transform.parent = GameObject.Find("PlayerContainer").transform;
                 }
+
+                cargo.GetComponent<Collider2D>().enabled = true;
+                cargo.GetComponent<Rigidbody2D>().simulated = true;
                 Rigidbody2D rb = cargo.GetComponent<Rigidbody2D>();
                 if (rb != null)
                 {
@@ -81,6 +84,8 @@ public class Catapult : MonoBehaviour
                     {
                         behaviour.enabled = true;
                     }
+
+                   
                 }
             }
         }

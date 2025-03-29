@@ -25,7 +25,6 @@ public class UpdateCounters : MonoBehaviour
     private void UpdateOnChange()
     {
         _killText.text = levelStats.killCount.ToString();
-        _keyText.text = levelStats.keyCount.ToString();
-        _coinText.text = levelStats.coinCount.ToString();
+   
     }
 }

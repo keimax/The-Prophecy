@@ -1,6 +1,7 @@
+// PlayerInventory.cs
 using System.Collections.Generic;
 using TheProphecy.Items;
-using TheProphecy.Player; // Ensure this is included
+using TheProphecy.Player;
 using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
@@ -70,11 +71,11 @@ public class PlayerInventory : MonoBehaviour
         if (toasterQueue.Count > 0)
         {
             var (itemSprite, itemName) = toasterQueue.Dequeue();
-            GameObject toasterMessage = Instantiate(toasterMessagePrefab, Object.FindObjectOfType<Canvas>().transform);
-            ToasterMessage toasterMessageScript = toasterMessage.GetComponent<ToasterMessage>();
-            toasterMessageScript.ShowMessage(itemSprite, itemName);
+            GameObject toasterMessageObj = Instantiate(toasterMessagePrefab, GameObject.FindObjectOfType<Canvas>().transform);
+            ToasterMessage toasterMessageScript = toasterMessageObj.GetComponent<ToasterMessage>();
             isToasterActive = true;
-            Invoke(nameof(ResetToaster), 1);
+            toasterMessageScript.OnToasterComplete += ResetToaster;
+            toasterMessageScript.ShowMessage(itemSprite, itemName);
         }
     }
 

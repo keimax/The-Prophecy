@@ -112,6 +112,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""SettingsClick"",
+                    ""type"": ""Button"",
+                    ""id"": ""b154852d-3cb3-49cf-af7c-ff1b75f0330a"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -246,6 +255,28 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""42df48ed-c65b-4756-83e0-35848189d1a7"",
+                    ""path"": ""<XInputController>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SettingsClick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""24898b31-029b-4a91-bb1f-64e6bf60395a"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SettingsClick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -422,6 +453,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_UI_MoveJoystick = m_UI.FindAction("MoveJoystick", throwIfNotFound: true);
         m_UI_UIClick = m_UI.FindAction("UIClick", throwIfNotFound: true);
         m_UI_Move = m_UI.FindAction("Move", throwIfNotFound: true);
+        m_UI_SettingsClick = m_UI.FindAction("SettingsClick", throwIfNotFound: true);
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_PlayerMove = m_Player.FindAction("PlayerMove", throwIfNotFound: true);
@@ -555,6 +587,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_UI_MoveJoystick;
     private readonly InputAction m_UI_UIClick;
     private readonly InputAction m_UI_Move;
+    private readonly InputAction m_UI_SettingsClick;
     public struct UIActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -562,6 +595,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         public InputAction @MoveJoystick => m_Wrapper.m_UI_MoveJoystick;
         public InputAction @UIClick => m_Wrapper.m_UI_UIClick;
         public InputAction @Move => m_Wrapper.m_UI_Move;
+        public InputAction @SettingsClick => m_Wrapper.m_UI_SettingsClick;
         public InputActionMap Get() { return m_Wrapper.m_UI; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -580,6 +614,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
+            @SettingsClick.started += instance.OnSettingsClick;
+            @SettingsClick.performed += instance.OnSettingsClick;
+            @SettingsClick.canceled += instance.OnSettingsClick;
         }
 
         private void UnregisterCallbacks(IUIActions instance)
@@ -593,6 +630,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
+            @SettingsClick.started -= instance.OnSettingsClick;
+            @SettingsClick.performed -= instance.OnSettingsClick;
+            @SettingsClick.canceled -= instance.OnSettingsClick;
         }
 
         public void RemoveCallbacks(IUIActions instance)
@@ -706,6 +746,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         void OnMoveJoystick(InputAction.CallbackContext context);
         void OnUIClick(InputAction.CallbackContext context);
         void OnMove(InputAction.CallbackContext context);
+        void OnSettingsClick(InputAction.CallbackContext context);
     }
     public interface IPlayerActions
     {

@@ -8,6 +8,13 @@ namespace TheProphecy.Player
         public event Action OnHealthChanged; // Event to notify health changes
         public event Action OnShieldChanged; // Event to notify shield changes
 
+
+
+        [SerializeField] private GameObject _hitPrefab;
+        [SerializeField] private GameObject _explodePrefab;
+        [SerializeField] private GameObject _smokePrefab;
+
+
         public override void Start()
         {
             base.Start(); // Calls the BaseUnit Start method
@@ -22,6 +29,10 @@ namespace TheProphecy.Player
             shield = MaxShield; // Reset shield to max on resurrection
             OnHealthChanged?.Invoke(); // Notify health change
             OnShieldChanged?.Invoke(); // Notify shield change
+
+         
+                _smokePrefab.SetActive(false);
+
         }
 
         public void GiveHealth(int amount)
@@ -29,6 +40,13 @@ namespace TheProphecy.Player
             health = Mathf.Clamp(health + amount, 0, MaxHealth);
             OnHealthChanged?.Invoke(); // Notify health change
             Debug.Log($"Health updated: {health}/{MaxHealth}");
+
+
+            if (health > MaxHealth / 3)
+            {
+                _smokePrefab.SetActive(false);
+            }
+
         }
 
         public void GiveShield(int amount)
@@ -40,6 +58,8 @@ namespace TheProphecy.Player
 
         public void TakeDamage(int damage)
         {
+            GameObject.Destroy(GameObject.Instantiate(_hitPrefab, transform.position, Quaternion.identity), 1f);
+
             if (shield > 0)
             {
                 int shieldDamage = Mathf.Min(damage, shield);
@@ -56,6 +76,12 @@ namespace TheProphecy.Player
 
             Debug.Log($"Damage taken: {damage}, Remaining Health: {health}, Remaining Shield: {shield}");
 
+            if(health <= MaxHealth/3)
+            {
+               _smokePrefab.SetActive(true);
+            }
+
+
             // Check if the player has died
             if (health <= 0)
             {
@@ -66,6 +92,7 @@ namespace TheProphecy.Player
         // Override the Die method if necessary
         protected override void Die()
         {
+            GameObject.Destroy(GameObject.Instantiate(_explodePrefab, transform.position, Quaternion.identity), 2f);
             base.Die(); // Call the base die logic
             Debug.Log($"{gameObject.name} has died."); // Additional logging
 

@@ -1,70 +1,70 @@
+// ToasterMessage.cs
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 using TMPro;
+using System.Collections;
+using System;
 
 public class ToasterMessage : MonoBehaviour
 {
     [SerializeField] private Image itemImage;
     [SerializeField] private TextMeshProUGUI itemNameText;
     [SerializeField] private float displayDuration = 2f;
-    [SerializeField] private float moveSpeed = 500f;
+
+    public event Action OnToasterComplete;
 
     public void ShowMessage(Sprite itemSprite, string itemName)
     {
         itemImage.sprite = itemSprite;
         itemNameText.text = itemName;
-        gameObject.SetActive(true); // Ensure the toaster is active
+        gameObject.SetActive(true);
         StartCoroutine(DisplayMessage());
     }
 
     private IEnumerator DisplayMessage()
     {
         RectTransform rectTransform = GetComponent<RectTransform>();
-        Vector2 startPosition = rectTransform.anchoredPosition; // Use the prefab's initial position
-        Vector2 endPosition = new Vector2(startPosition.x, startPosition.y - rectTransform.rect.height - 10); // Move into the viewport
+        Vector2 startPosition = rectTransform.anchoredPosition;
+        Vector2 endPosition = new Vector2(startPosition.x, startPosition.y - rectTransform.rect.height - 25f);
+
+        float halfDuration = displayDuration / 2f;
+        float elapsed = 0f;
 
         // Move in
-        float elapsedTime = 0f;
-        while (elapsedTime < displayDuration / 2)
+        while (elapsed < halfDuration)
         {
-            rectTransform.anchoredPosition = Vector2.Lerp(startPosition, endPosition, elapsedTime / (displayDuration / 2));
-            elapsedTime += Time.deltaTime;
+            rectTransform.anchoredPosition = Vector2.Lerp(startPosition, endPosition, elapsed / halfDuration);
+            elapsed += Time.deltaTime;
             yield return null;
         }
         rectTransform.anchoredPosition = endPosition;
 
         // Wait
-        yield return new WaitForSeconds(displayDuration / 2);
+        yield return new WaitForSeconds(halfDuration);
 
         // Move out
-        elapsedTime = 0f;
-        while (elapsedTime < displayDuration / 2)
+        elapsed = 0f;
+        while (elapsed < halfDuration)
         {
-            rectTransform.anchoredPosition = Vector2.Lerp(endPosition, startPosition, elapsedTime / (displayDuration / 2));
-            elapsedTime += Time.deltaTime;
+            rectTransform.anchoredPosition = Vector2.Lerp(endPosition, startPosition, elapsed / halfDuration);
+            elapsed += Time.deltaTime;
             yield return null;
         }
         rectTransform.anchoredPosition = startPosition;
 
-        gameObject.SetActive(false); // Deactivate the toaster after use
+        gameObject.SetActive(false);
+        OnToasterComplete?.Invoke();
+        Destroy(gameObject);
     }
 
     private void OnRectTransformDimensionsChange()
     {
-        // Ensure the toaster message is visible when the screen size changes
         if (gameObject.activeSelf)
         {
             RectTransform rectTransform = GetComponent<RectTransform>();
-            Vector2 startPosition = rectTransform.anchoredPosition; // Use the prefab's initial position
-            Vector2 endPosition = new Vector2(startPosition.x, startPosition.y - rectTransform.rect.height - 10); // Move into the viewport
+            Vector2 startPosition = rectTransform.anchoredPosition;
+            Vector2 endPosition = new Vector2(startPosition.x, startPosition.y - rectTransform.rect.height - 10f);
             rectTransform.anchoredPosition = endPosition;
         }
     }
-
-    public float GetDisplayDuration()
-    {
-        return displayDuration;
-    }
 }
-
