@@ -97678,7 +97678,7 @@ PrefabInstance:
     - target: {fileID: 4811734084722802911, guid: 157f6fd34347c774e80a4571c75e3771,
         type: 3}
       propertyPath: touchSettings.maxForwardSpeed
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4811734084722802911, guid: 157f6fd34347c774e80a4571c75e3771,
         type: 3}
